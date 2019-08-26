@@ -1,6 +1,7 @@
  const $ = selector => document.querySelector(selector);
  const $$ = selector => document.querySelectorAll(selector);
 
+
 function createDivAvecId(contenuToAdd, idToAppend, id) { 
   var nouvelleDiv = document.createElement("DIV"); 
   var contenu = document.createTextNode(contenuToAdd); 
@@ -9,9 +10,14 @@ function createDivAvecId(contenuToAdd, idToAppend, id) {
   document.getElementById(idToAppend).appendChild(nouvelleDiv);
 }
 
+function createNode(nodeType, cible){
+  let nouveauNode = document.createElement(nodeType);
+  document.getElementById(cible).appendChild(nouveauNode);
+}
+
 function createNodeWithTexte(nodeType, texte, cible) { 
-  var nouveauNode = document.createElement(nodeType); 
-  var contenu = document.createTextNode(texte); 
+  let nouveauNode = document.createElement(nodeType); 
+  let contenu = document.createTextNode(texte); 
   nouveauNode.appendChild(contenu);
   document.getElementById(cible).appendChild(nouveauNode);
 }
@@ -38,15 +44,31 @@ function createTextNode(texte, idToAppend){
   monTag.appendChild(monTexte); 
 }
 
+function createUlWithLiWithTexte( cible, array){
+  let nouveauTag = document.createElement("ul"); 
+  for (var element in array){
+    let liChild = document.createElement('li');
+    let liElement = document.createTextNode(array[element]); 
+    liChild.appendChild(liElement);
+    nouveauTag.appendChild(liChild);
+  }
+
+  document.getElementById(cible).appendChild(nouveauTag);
+
+}
 
 function creerDOM(){
-  createDivAvecId("Le", 'app','TP01');
+  createDivAvecId("Le", 'exo1','TP01');
   createNodeWithTexte('STRONG','World Wide Web Consortium','TP01');
   createTextNode('abrégé par le sigle','TP01');
   createNodeWithTexte('STRONG','W3C','TP01');
   createTextNode('est un ','TP01');
   createNodeWithTexteAndAttribute('a', 'organisme de standardisation', 'TP01', 'href', 'http://fr.wikipedia.org/wiki/Organisme_de_normalisation" title="Organisme de normalisation');
   createTextNode('à but non-lucratif chargé de promouvoir la compatibilité des technologies du ','TP01');
-  createNodeWithTexteAndAttribute('a', 'World Wide Web', 'TP01', 'href', 'http://fr.wikipedia.org/wiki/World_Wide_Web');
-  createTextNode('Web ','TP01');
+  createNodeWithTexteAndAttribute('a', 'World Wide Web ', 'TP01', 'href', 'http://fr.wikipedia.org/wiki/World_Wide_Web');
+  createTextNode(' Web ','TP01');
+
+  createDivAvecId("", 'exo2', 'divTP2');
+  createNodeWithTexte('p','langages basés sur ECMAScript','divTP2');
+  createUlWithLiWithTexte('divTP2', ['Javascript', 'JScript', 'ActionScript', 'EX4']);
 }
