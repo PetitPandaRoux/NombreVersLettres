@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>JS Form - Drag and drop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <div id="drag-and-drop">
+    <div class="draggableBox">1</div>
+    <div class="draggableBox">2</div>
+    <div class="draggableBox">3</div>
+  </div>
+
+  <p id="screen-log"></p>
+
+  <div>
+    <div class="unique-box">My Box</div>
+  </div> -->
+
+  <form onsubmit="verification()">
+    <div class="container container-form">
+      <fieldset>
+        <legend>Formulaire JS</legend>
+        <div class="champ champ-radio">
+            <label for='sexe'>Homme</label><input class="sexe" name="sexe" type="radio" value="homme" />
+            <label for='sexe'>Femme</label>
+            <input class="sexe" name="sexe" type="radio" value="femme" />
+            <span class="alerte-sexe"></span>
+        </div>
+
+
+
+        <div class="champ">
+          <label for="nom">Nom:</label>
+          <input id="nom" type="text" name="nom" placeholder="entrez votre nom" ><span class="alerte-nom"></span>
+        </div>
+
+        <div class="champ">
+          <label for="prenom">Prénom:</label>
+          <input id="prenom" type="text" name="prenom" placeholder="entrez votre prénom" ><span class="alerte-prenom"></span>
+        </div>
+
+        <div class="champ">
+          <label for="age">Age:</label>
+          <input id="age" type="text" name="age" placeholder="23,24,25" ><span class="alerte-age"></span>
+        </div>
+
+        <div class="champ">
+          <label for="pseudo">Pseudo:</label>
+          <input id="pseudo" type="text" name="pseudo" placeholder="entrez votre pseudo" ><span class="alerte-pseudo"></span>
+        </div>
+
+        <div class="champ">
+          <label for="password">Mot de passe :</label>
+          <input id="password" type="password" name="password"><span class="alerte-password"></span>
+        </div>
+
+        
+        <div class="champ">
+          <label for="confirm">Confirmer mot de passe :</label>
+          <input id="confirm" type="password" name="confirm"><span class="alerte-confirm"></span>
+        </div>
+
+        <div class="champ">
+          <label for="pays">Pays:</label>
+          <select id="pays" name="pays">
+            <option value="none">Sélectionnez votre pays de résidence</option>
+            <option value="en">Angleterre</option>
+            <option value="us">États-Unis</option>
+            <option value="fr">France</option>
+          </select>
+          <span class="alerte-pays"></span>
+        </div>
+
+        <div class="champ">
+          <label for="newsletter">Recevoir email :</label>
+          <input id="newsletter" type="checkbox" name="newsletter"><span class="alerte-newsletter"></span>
+        </div>
+  
+
+      </fieldset>
+      <input class="btn__valider" type ='submit' value ="valider" onclick="verification()">
+    </div>
+
+
+  </form>
+  
+  <!-- <script src="draggable.js"></script> -->
+  <script src="formulaire.js"></script>
+</body>
+</html>

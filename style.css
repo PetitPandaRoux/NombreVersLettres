@@ -1,0 +1,40 @@
+.draggableBox {
+  position: absolute;
+  width: 80px; height: 60px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 40px;
+  background-color: orangered;
+  color: #CCC;
+  cursor: move;
+}
+
+.unique-box {
+  position: absolute;
+  background-color:blue;
+  top:400px;
+  width:300px;
+  cursor: move;
+  left:500px;
+
+}
+
+.container-form {
+  margin-top:20px;
+}
+
+.champ{
+  margin:0.5em;
+  font-size:1.2em;
+}
+
+.btn__valider{
+  margin-left:0.5em;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  width:10em;
+  height:3em;
+  background-color:orange;
+  color:white;
+}

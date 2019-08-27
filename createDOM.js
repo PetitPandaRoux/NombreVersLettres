@@ -63,6 +63,12 @@ function createTableOfDefinition(dict, cible){
   } 
 }
 
+/**
+ * 
+ * @param {array} array is an array contening all li contents
+ * @param {*} cible 
+ * @return void ;
+ */
 function createUlWithLiWithTexte(array, cible){
   let nouveauTag = document.createElement("ul"); 
   for (var element in array){
@@ -72,7 +78,23 @@ function createUlWithLiWithTexte(array, cible){
     nouveauTag.appendChild(liChild);
   }
   document.getElementById(cible).appendChild(nouveauTag);
+}
 
+/**
+ * 
+ * @param {*} nodeType 
+ * @param {*} nodeContent 
+ * @param {*} dictOfAttributes 
+ * @return {nodeType} nouveauTag is a node type
+ */
+function createTagWithAttributes(nodeType, nodeContent, dictOfAttributes) {
+  let nouveauNode = document.createElement(nodeType);
+  let contenu = document.createTextNode(nodeContent);
+  nouveauNode.appendChild(contenu);
+  for (var attribute in dictOfAttributes) {
+    nouveauNode.setAttribute(attribute, dictOfAttributes[attribute]);
+  }
+  return nouveauNode;
 }
 
 function creerDOM(){
@@ -92,7 +114,7 @@ function creerDOM(){
 
 
   var definitionLangage = {
-    'javascript': "Javascript est un langage de programmation de scripts principalement utilisé dans les pages web interactives mais aussi côté serveur",
+    'Javascript': "Javascript est un langage de programmation de scripts principalement utilisé dans les pages web interactives mais aussi côté serveur",
     'JScript': "JScript est le nm générique de plusieurs implémentatoins d'ECMAscript 3 créees par Microsoft",
     'ActionScript': "ActionScript est le langage de programmation au sein d'applications clients (Adobe Flash, Adoble Flex) et serveur (Flash media server, JRun, Macromédia Générator).",
     'EX4': "ECMAScript for XML(E4X) est une extension XML au langage ECMAScript."
@@ -102,4 +124,7 @@ function creerDOM(){
   createNodeWithTexte('p', 'Langages basés sur ECMAScript :', 'divTP3');
   createTableOfDefinition(definitionLangage, 'divTP3');
 
+  createDivAvecId("",'exo4', 'divTP4');
+  let nouveauTag = createTagWithAttributes('form',"", {'enctype':"multipart/form-data", 'methode':"post", 'action':"upload.php"})
+  document.getElementById("divTP4").appendChild(nouveauTag);
 }
