@@ -7,7 +7,7 @@ function checkRadioButton(){
   }
 }
 
-function checkChampNom(e){
+function checkChampNom(){
   if(this.value.length < 2){
     afficherMessageErreur(this);
   } else {
@@ -87,7 +87,7 @@ for (let i = 0 ; i < sexe.length ; i++) {
   sexe[i].addEventListener("focusout", checkRadioButton, false);
 }
 
-document.querySelector('#nom').addEventListener("focus", checkChampNom(2), false);
+document.querySelector('#nom').addEventListener("focus", checkChampNom, false);
 document.querySelector('#nom').addEventListener("focusout", checkChampNom, false);
 document.querySelector('#prenom').addEventListener("focus", checkChampNom, false);
 document.querySelector('#prenom').addEventListener("focusout", checkChampNom, false);

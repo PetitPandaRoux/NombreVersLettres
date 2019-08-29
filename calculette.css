@@ -1,0 +1,127 @@
+.calculatrice {
+	margin:15vw auto;
+	width:35vw;
+	height:60vh;
+	background-color:grey;
+}
+
+.grid__container {
+	display:grid;
+	height: 90%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows:0.8fr 1.2fr 1fr 1fr 1fr 1fr 1fr;
+	padding:1em;
+	grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas: 
+    "historic historic historic historic"
+		"ecran ecran ecran ecran"
+		"ce del  pourcent add"
+		"chiffre-7 chiffre-8 chiffre-9 soustraire"
+		"chiffre-4 chiffre-5 chiffre-6 multiplier"
+		"chiffre-1 chiffre-2 chiffre-3 diviser"
+		"chiffre-0 change-sign float resultat"
+}
+
+.screen-historic {
+  grid-area: historic;
+  font-size:1.5em;
+  text-align:right;
+  background-color:rgb(240, 240, 240);
+}
+
+.screen {
+  grid-area: ecran;
+  text-align:right;
+  font-size:3em;
+	background-color:white;
+	border:2px orange solid;
+}
+
+.btn {
+	background-color:white;
+	font-size:0.8em;
+	text-align:center;
+	border:black 1px solid;
+}
+
+.chiffre-0 {
+	grid-area:chiffre-0;
+}
+
+.chiffre-1 {
+	grid-area: chiffre-1;
+}
+
+.chiffre-2 {
+	grid-area: chiffre-2;
+}
+
+.chiffre-3 {
+	grid-area: chiffre-3;
+}
+
+.chiffre-4 {
+	grid-area: chiffre-4;
+}
+
+.chiffre-5 {
+	grid-area: chiffre-5;
+}
+
+.chiffre-6 {
+	grid-area: chiffre-6;
+}
+
+.chiffre-7 {
+	grid-area: chiffre-7;
+}
+
+.chiffre-8 {
+	grid-area: chiffre-8;
+}
+
+.chiffre-9 {
+	grid-area: chiffre-9;
+}
+
+
+.addition {
+	grid-area: add;
+}
+
+.soustraction {
+	grid-area: soustraire;
+}
+
+.multiplication {
+	grid-area: multiplier;
+}
+
+.division {
+	grid-area:diviser;
+}
+
+.ce {
+	grid-area: ce;
+}
+
+.del {
+	grid-area: del;
+}
+
+.pourcent {
+	grid-area: pourcent;
+}
+
+.changer-signe {
+	grid-area: change-sign;
+}
+
+.virgule {
+	grid-area: float;
+}
+
+.resultat{
+	grid-area: resultat;
+}

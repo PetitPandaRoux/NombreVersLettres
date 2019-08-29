@@ -38,3 +38,14 @@
   background-color:orange;
   color:white;
 }
+
+.main {
+  font-size:3em;
+  margin-top:25vh;
+  text-align:center;
+}
+
+.user-input{
+  width:25vw;
+  height:2em;
+}
